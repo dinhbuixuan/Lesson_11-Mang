@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Type Anthing Slowly</h1>
+<input style="height: 80px; width: 500px; background-color: gainsboro;" oninput="showText()" id="show">
+<body>
+ <script>
+
+    let str = "Tôi là người đẹp trai nhất thế giới chắc chắn là vậy"
+    let arr = str.split(" ");
+    console.log(arr);
+    let index = 0;
+    function hienThiChu(){
+        let str = "";
+        for(let i = 0; i < index; i++){
+            str += arr[i] + " ";
+        }
+        document.getElementById(`show`).value = str;
+    }
+
+    function showText(){
+        if(index < arr.length){
+            index++;
+        }else{
+            index = 0;
+        }
+        hienThiChu();
+    }
+    
+ </script>   
+</body>
+</html>
